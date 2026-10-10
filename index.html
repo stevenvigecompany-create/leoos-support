@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LeoOS Support</title><link rel="canonical" href="https://gotleoos.com/">
+<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:24px;color:#111;line-height:1.5}h1{margin-bottom:0}label{display:block;margin-top:12px;font-weight:600}input,select,textarea{width:100%;padding:8px;font:inherit;box-sizing:border-box}button{margin-top:16px;padding:10px 18px;font:inherit;background:#111;color:#fff;border:0;border-radius:6px}.ok{color:#0a7d33}section{margin-top:32px}details{margin:8px 0}</style></head><body>
+<h1>LeoOS Support</h1><p>Client help desk. New here? Start at <a href="https://getleoos.com">getleoos.com</a>.</p>
+<section id="status"><h2>Status</h2><p class="ok">● All systems operational</p><p><small>Last updated: Oct 10, 2026</small></p></section>
+<section id="ticket"><h2>Open a support ticket</h2>
+<form id="f"><label>Name<input name="name" required></label><label>Email<input type="email" name="email" required></label>
+<label>Your bot / product<select name="product"><option>LeoOS operator</option><option>Budget Coach</option><option>Founder OS template</option><option>Other</option></select></label>
+<label>Urgency<select name="urgency"><option>Normal</option><option>High: bot giving wrong info</option><option>Down: bot not responding</option></select></label>
+<label>What happened?<textarea name="msg" rows="6" required placeholder="What you asked, what the bot said, what you expected. Attach the 'fix my coach' log if you have it."></textarea></label>
+<button>Send ticket</button></form>
+<p><small>Never include passwords or full bank/card numbers.</small></p></section>
+<section id="faq"><h2>FAQ</h2>
+<details><summary>My bot gave a number that looks wrong.</summary>Every number links back to its source. Use "fix my coach" or open a ticket with the log; we diagnose and push the fix to the template.</details>
+<details><summary>Do you have access to my accounts?</summary>No. We only look in during a session you start through your back-end access, and bank connections are read-only.</details>
+<details><summary>How fast do you reply?</summary>Within 1 business day; "Down" tickets same day.</details>
+<details><summary>How do I cancel?</summary>Open a ticket with "Cancel" and we confirm by email.</details></section>
+<section id="contact"><h2>Contact</h2><p>Email: <a href="mailto:leoos@mail.grokbot.com">leoos@mail.grokbot.com</a><br>Hours: Mon–Fri, 9–5 CT</p></section>
+<script>document.getElementById('f').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);const s=`[${d.get('urgency')}] ${d.get('product')} - ${d.get('name')}`;const b=`Name: ${d.get('name')}\nEmail: ${d.get('email')}\nProduct: ${d.get('product')}\nUrgency: ${d.get('urgency')}\n\n${d.get('msg')}`;location.href='mailto:leoos@mail.grokbot.com?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)};</script>
+</body></html>
